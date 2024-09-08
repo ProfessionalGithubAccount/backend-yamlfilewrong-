@@ -1,0 +1,35 @@
+.attendance {
+  text-align: center;
+  padding: 20px;
+}
+
+.attendance h3 {
+  margin-bottom: 15px;
+}
+
+/* .attendance .circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #5e5e5e;
+  box-shadow: inset black 0 2px 4px ;
+} */
+
+.chart-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.chart-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

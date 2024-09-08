@@ -1,0 +1,9 @@
+<div class="timeline">
+  <h3>Timeline</h3>
+  <div class="display">
+    <ul>
+      <li *ngFor="let assignment of assignments">
+        {{ assignment.title }} <br>Deadline: {{assignment.deadline}}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="course-card">
+  <div class="course-image" [ngStyle]="{'background-image': 'url(' + course.image + ')'}" routerLink="/professor-coursedetails"></div>
+  <div class="course-details">
+    <h3>{{ course.name }}</h3>
+    <p>{{ course.year }} Year</p>
+    <p>{{ course.semester }} Sem</p>
+  </div>
+</div>

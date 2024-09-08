@@ -1,0 +1,20 @@
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(255, 251, 247); */
+  background-color: white;
+}
+
+mat-calendar {
+  width: 350px; /* Adjust width as needed */
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.8);
+  z-index:0;
+  background-color: white;
+  /* opacity: 0.8; */
+}
+mat-calender-header{
+  margin: 0px;
+}

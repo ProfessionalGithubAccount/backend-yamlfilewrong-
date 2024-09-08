@@ -1,0 +1,75 @@
+<!-- <div class="course-container">
+  <app-header></app-header>
+
+  <div class="course-content">
+      <h2>Course Name</h2>
+      <div class="tab-buttons">
+          <button (click)="toggleView('resources')" [class.active]="!showAssignments">Resources</button>
+          <button (click)="toggleView('assignments')" [class.active]="showAssignments">Assignments</button>
+      </div>
+      <div class="tab-line"></div>
+      <div class="syllabus">
+          <span>Syllabus</span> <i class="icon-chevron-right"></i>
+      </div>
+  
+      <div class="card-container">
+          <div *ngIf="!showAssignments; else assignmentsTemplate">
+              <div *ngFor="let video of videos" class="card">
+                  <h4>{{ video.snippet.title }}</h4>
+                  <a [href]="'https://www.youtube.com/watch?v=' + video.id.videoId" target="_blank">
+                      <img [src]="video.snippet.thumbnails.default.url" alt="{{ video.snippet.title }}" />
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      <ng-template #assignmentsTemplate>
+          <div *ngFor="let item of assignments" class="card-2">
+              {{ item }}
+          </div>
+      </ng-template>
+
+  <app-footer></app-footer>
+</div> -->
+
+<div class="course-container">
+  <app-header></app-header>
+
+  <div class="course-content">
+      <h2>Course Name</h2>
+      <div class="tab-buttons">
+          <button (click)="toggleView('resources')" [class.active]="!showAssignments">Resources</button>
+          <button (click)="toggleView('assignments')" [class.active]="showAssignments">Assignments</button>
+          <button routerLink="">Book</button>
+      </div>
+      <div class="tab-line"></div>
+      <!-- <div class="syllabus">
+          <span>Syllabus</span> <i class="icon-chevron-right"></i>
+      </div> -->
+
+      <!-- Main content container -->
+      <div class="card-container">
+          <!-- Resources View -->
+          <div *ngIf="!showAssignments; else assignmentsTemplate">
+              <!-- Flex container for cards -->
+              <div class="resources-grid">
+                  <div *ngFor="let video of videos" class="card">
+                      <h4>{{ video.snippet.title }}</h4>
+                      <a [href]="'https://www.youtube.com/watch?v=' + video.id.videoId" target="_blank">
+                          <img [src]="video.snippet.thumbnails.default.url" alt="{{ video.snippet.title }}" />
+                      </a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Assignments View -->
+          <ng-template #assignmentsTemplate>
+              <div *ngFor="let item of assignments" class="card-2" routerLink="/assignment-upload">
+                  {{ item }}
+              </div>
+          </ng-template>
+      </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

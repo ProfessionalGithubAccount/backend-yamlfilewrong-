@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="assignment-container">
+    <div class="assignment-header">
+      <h2>Assignment</h2>
+      <div class="assignment-dates">
+        <p><strong>Opened:</strong></p>
+        <p><strong>Due:</strong></p>
+      </div>
+    </div>
+  
+    <div class="question-file-section">
+      <button class="file-button" (click)="loadAssignmentFile(1)">
+        <i class="icon">📄</i> Question File
+      </button>
+      <iframe [src]="assignmentUrl" frameborder="0" width="100%" height="500px"></iframe>
+    </div>
+  
+    <!-- <div class="action-buttons">
+      <button class="upload-button">Upload</button>
+      <button class="remove-button">Remove</button>
+    </div> -->
+  
+    <div class="submission-status">
+      <h3>Submission Status</h3>
+      <table>
+        <tr>
+          <td>Submission Status</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Grading Status</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>File Submissions</td>
+          <td>
+            <button class="file-uploaded">
+              <textarea name="" id="" cols="55" rows="8"></textarea>
+            </button>
+          </td>
+        </tr>
+      </table>
+      <div class="save-cancel-buttons">
+        <button class="save-button">Save Changes</button>
+        <button class="cancel-button">Cancel</button>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>

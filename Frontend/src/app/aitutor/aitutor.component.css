@@ -1,0 +1,93 @@
+.side-window {
+  position: fixed;
+  /* position: relative; */
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 97%;
+  background: rgb(214, 214, 214); /* Slightly opaque white background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 2; /* Ensure it is on top of other elements */
+  overflow: hidden; /* Hide any overflow */
+  opacity: 1;
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333; /* Adjust color to your preference */
+  font-weight: bold;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.conversation {
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%; /* Adjust width */
+}
+
+.you {
+  align-self: flex-start; /* Align messages to the left */
+  background-color: #63c7d4; /* Light blue for "You" */
+  border-radius: 15px 15px 0 15px; /* Rounded corners */
+}
+
+.ai {
+  align-self: flex-end; /* Align messages to the right */
+  background-color: #52a559; /* Light green for "AI" */
+  border-radius: 15px 15px 15px 0; /* Rounded corners */
+}
+
+.message-text {
+  white-space: pre-line; /* Preserve line breaks */
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 10px; /* Add space between conversation and input box */
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.send-button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
