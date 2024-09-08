@@ -4,6 +4,7 @@ spring:
 
   cloud:
     gateway:
+     mvc: 
       routes: # This should be directly under `gateway`, not `mvc`
         - id: lbservice-route
           uri: lb://ASSIGNMENTSERVICE
@@ -21,48 +22,86 @@ spring:
             - Path=/user/**
 
     discovery:
-      locator:
+     locator:
         enabled: true # Correct discovery configuration for routing via service discovery (Eureka)
 
 management:
-  endpoints:
+ endpoints:
     web:
       exposure:
         include: "*" # This exposes all management endpoints (use cautiously in production)
 
 server:
-  port: 5555 # This sets the port for the gateway to 5555
-#spring:
-#  application:
-#    name:
-#      GatewayLMS
-#  cloud:
-#    gateway:
-#    mvc:
-#        routes:
-#          - id: lbservice-route
-#            uri: lb://ASSIGNMENTSERVICE
-#            predicates:
-#              - Path=/assignments/**
-#
-#          - id: lbservice2-route
-#            uri: lb://COURSESERVICE
-#            predicates:
-#               - Path=/courses/**
-#
-#          - id: lbservice3-route
-#            uri: lb://USERMANAGEMENT
-#            predicates:
-#               - Path=/user/**
-#
-#    discovery:
-#      enabled: true
-#
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#
-#server:
-#  port: 5555
+  port: 5555
+
+
+
+
+# spring:
+#   application:
+#     name: GatewayLMS # This looks fine, it's the name of your application.
+
+#   cloud:
+#     gateway:
+#       routes: # This should be directly under `gateway`, not `mvc`
+#         - id: lbservice-route
+#           uri: lb://ASSIGNMENTSERVICE
+#           predicates:
+#             - Path=/assignments/**
+
+#         - id: lbservice2-route
+#           uri: lb://COURSESERVICE
+#           predicates:
+#             - Path=/courses/**
+
+#         - id: lbservice3-route
+#           uri: lb://USERMANAGEMENT
+#           predicates:
+#             - Path=/user/**
+
+#     discovery:
+#       locator:
+#         enabled: true # Correct discovery configuration for routing via service discovery (Eureka)
+
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*" # This exposes all management endpoints (use cautiously in production)
+
+# server:
+#   port: 5555 # This sets the port for the gateway to 5555
+# #spring:
+# #  application:
+# #    name:
+# #      GatewayLMS
+# #  cloud:
+# #    gateway:
+# #    mvc:
+# #        routes:
+# #          - id: lbservice-route
+# #            uri: lb://ASSIGNMENTSERVICE
+# #            predicates:
+# #              - Path=/assignments/**
+# #
+# #          - id: lbservice2-route
+# #            uri: lb://COURSESERVICE
+# #            predicates:
+# #               - Path=/courses/**
+# #
+# #          - id: lbservice3-route
+# #            uri: lb://USERMANAGEMENT
+# #            predicates:
+# #               - Path=/user/**
+# #
+# #    discovery:
+# #      enabled: true
+# #
+# #management:
+# #  endpoints:
+# #    web:
+# #      exposure:
+# #        include: "*"
+# #
+# #server:
+# #  port: 5555
